@@ -14,8 +14,17 @@ games {
 
 ui_page 'web/build/index.html'
 
-client_script "client/**/*"
-server_script "server/**/*"
+shared_scripts {
+    "@ox_lib/init.lua",
+    "config.lua"
+}
+
+client_scripts {
+    "client.lua"
+}
+client_scripts {
+    "server.lua"    
+}
 
 files {
 	'web/build/index.html',
